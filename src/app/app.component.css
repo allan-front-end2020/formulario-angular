@@ -4,3 +4,7 @@
     align-items: center;
     height: 100vh;
 }
+
+.grow {
+    width: 100%;
+}

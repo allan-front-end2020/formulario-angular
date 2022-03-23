@@ -6,57 +6,57 @@
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form action="#" id='main-form'>
+            <form action="#" id='main-form' (ngSubmit)="submit()" #form='ngForm'>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Nome:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='nome'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='nome' name="nome" required minlength="6" #inputNome='ngModel'>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Sobrenome:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='sobrenome'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='sobrenome' name='sobrenome' required minlength="6" #inputSobrenome='ngModel'>
                     </mat-form-field>
                 </div>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Username:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='username'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='username' name='username' class='grow' required minlength="6" #inputUsername='ngModel'>
                     </mat-form-field>
 
                 </div>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>CPF:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='cpf'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='cpf' name='cpf' required minlength="6" #inputNome='ngModel' #inputCpf='ngModel'>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Telefone:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='telefone'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='telefone' name='telefone' required minlength="6" #inputTelefone='ngModel'>
                     </mat-form-field>
                 </div>
 
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Endereço:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='endereco'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='endereco' name='endereco' required minlength="6" #inputEndereco='ngModel'>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Complemento:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='complemento'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='complemento' name='complemento' required minlength="6" #inputcomplemento='ngModel'>
                     </mat-form-field>
                 </div>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Digite sua senha:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='senha0'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='senha0' name='senha0' required minlength="6" #inputSenha0='ngModel'>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Comfirme sua senha:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='senha1'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='senha1' name='senha1' required minlength="6" #inputSenha1='ngModel'>
                     </mat-form-field>
                 </div>
-                <div class='form-row'>
-                    <button mat-button color="accent">Cadastrar</button>
+                <div class=' form-row '>
+                    <button mat-raised-button type="submit" color="accent" class="gro">Cadastrar</button>
                 </div>
 
             </form>

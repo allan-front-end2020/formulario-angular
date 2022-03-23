@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -17,4 +18,14 @@ export class AppComponent {
   complemento:string =''
   senha0:string =''
   senha1:string =''
+
+
+  constructor(
+    private snack : MatSnackBar
+  ){}
+
+  submit():void{
+ 
+  this.snack.open('você foi cadastrado!', 'X' , { duration:2000 } )
+  }
 }
