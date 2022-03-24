@@ -1,3 +1,6 @@
+<h1>Templent Drivers Forms</h1>
+
+
 <div class='container'>
     <mat-card>
         <mat-card-header>
@@ -10,64 +13,97 @@
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Nome:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='nome' name="nome" required minlength="6" #inputNome='ngModel'>
-                        <mat-error ngif='inputName.invalid'>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='nome' name="nome" required minlength="3" #inputNome='ngModel'>
+                        <mat-error *ngIf="inputNome.invalid">Campo obrigatorio!!!!
+                            <span *ngIf="inputNome.errors?.['minlength']">
+                             nao foi atingindo o nnumero de cacateres
+                          </span>
+                        </mat-error>
+
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Sobrenome:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='sobrenome' name='sobrenome' required minlength="6" #inputSobrenome='ngModel'>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='sobrenome' name='sobrenome' required minlength="" #inputSobrenome='ngModel'>
+                        <mat-error>Campo invalido!!
+                            <span *ngIf="inputSobrenome.errors?.['minlength']">
+                                nao foi atingindo o numero de cacateres
+                             </span>
+
+                        </mat-error>
                     </mat-form-field>
                 </div>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Username:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='username' name='username' class='grow' required minlength="6" #inputUsername='ngModel'>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='username' name='username' class='grow' required minlength="3" #inputUsername='ngModel'>
+                        <mat-error>Campo invalido!!
+                            <span *ngIf="inputUsername.errors?.['minlength']">
+                                nao foi atingindo o numero de cacateres
+                             </span>
+
+                        </mat-error>
                     </mat-form-field>
 
                 </div>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>CPF:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='cpf' name='cpf' required minlength="6" #inputNome='ngModel' #inputCpf='ngModel'>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='cpf' name='cpf' required minlength="3" #inputNome='ngModel' #inputCpf='ngModel'>
+                        <mat-error>Campo invalido!!
+                            <span *ngIf="inputCpf.errors?.['minlength']">
+                                nao foi atingindo o numero de cacateres
+                             </span>
+
+                        </mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Telefone:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='telefone' name='telefone' required minlength="6" #inputTelefone='ngModel'>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='telefone' name='telefone' required minlength="3" #inputTelefone='ngModel'>
+                        <mat-error>Campo invalido!!
+                            <span *ngIf="inputTelefone.errors?.['minlength']">
+                                nao foi atingindo o numero de cacateres
+                             </span>
+
+                        </mat-error>
                     </mat-form-field>
                 </div>
 
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Endereço:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='endereco' name='endereco' required minlength="6" #inputEndereco='ngModel'>
+                        <input type='text' matInput placeholder='' [(ngModel)]='endereco' name='endereco' required minlength="3" #inputEndereco='ngModel'>
                         <mat-error>Campo invalido!!</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Complemento:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='complemento' name='complemento' required minlength="6" #inputComplemento='ngModel'>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='complemento' name='complemento' minlength="3" #inputComplemento='ngModel'>
+                        <span *ngIf="inputComplemento.errors?.['minlength']">
+                        
+                         </span>
                     </mat-form-field>
                 </div>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Digite sua senha:</mat-label>
-                        <input type='text' matInput placeholder='' [(ngModel)]='senha0' name='senha0' required minlength="6" #inputSenha0='ngModel'>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text' matInput placeholder='' [(ngModel)]='senha0' name='senha0' required minlength="3" #inputSenha0='ngModel'>
+                        <mat-error>Campo invalido!!
+                            <span *ngIf="inputComplemento.errors?.['minlength']">
+                                nao foi atingindo o numero de cacateres
+                             </span>
+                        </mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Comfirme sua senha:</mat-label>
-                        <input type='text ' matInput placeholder=' ' [(ngModel)]='senha1 ' name='senha1 ' required minlength="6" #inputSenha1=''>
-                        <mat-error>Campo invalido!!</mat-error>
+                        <input type='text ' matInput placeholder=' ' [(ngModel)]='senha1 ' name='senha1 ' required minlength="3" #inputSenha1=''>
+                        <mat-error>Campo invalido!!
+                            <span *ngIf="inputComplemento.errors?.['minlength']">
+                                nao foi atingindo o numero de cacateres
+                             </span>
+
+                        </mat-error>
                     </mat-form-field>
                 </div>
-                <div class=' form-row '>
-                    <button mat-raised-button type="submit" color="accent" class="gro" [disabled]="inputNome.invalid || inputComplemento || input></button>
+                <div class='form-row'>
+                    <button mat-button color="accent" type="submit" class="grow" [disabled]="form.invalid"> Cadastrar</button>
                 </div>
-
-            </form>
-        </mat-card-content>
-    </mat-card>
+                <mat-card-content>

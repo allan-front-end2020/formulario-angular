@@ -7,4 +7,9 @@
 
 .grow {
     width: 100%;
+    margin-top: 13px;
+}
+
+h1{
+    text-align:center;
 }
