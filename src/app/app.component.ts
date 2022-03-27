@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'form1';
 
   nome:string =''
@@ -19,13 +21,29 @@ export class AppComponent {
   senha0:string =''
   senha1:string =''
 
-
   constructor(
-    private snack : MatSnackBar
-  ){}
+    public dialog: MatDialog) {}
 
-  submit():void{
- 
-  this.snack.open('você foi cadastrado!', 'X' , { duration:2000 } )
-  }
+
+
+ngOnInit(): void {
+  
+ }
+
+ openDialog(): void {
+  const dialogRef = this.dialog.open( DialogComponent,{
+    width: '250px',
+   
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+  
+  });
 }
+
+}
+
+
+
+

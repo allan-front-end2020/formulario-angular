@@ -1,4 +1,4 @@
-<h1>Templent Drivers Forms</h1>
+<h1>Templent Drivers forms</h1>
 
 
 <div class='container'>
@@ -9,7 +9,7 @@
             </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form action="#" id='main-form' (ngSubmit)="submit()" #form='ngForm'>
+            <form action="#" id='main-form' #form='ngForm'>
                 <div class='form-row'>
                     <mat-form-field>
                         <mat-label>Nome:</mat-label>
@@ -104,6 +104,7 @@
                     </mat-form-field>
                 </div>
                 <div class='form-row'>
-                    <button mat-button color="accent" type="submit" class="grow" [disabled]="form.invalid"> Cadastrar</button>
+                    <button mat-button color="accent" type="submit" class="grow" [disabled]="form.invalid" (click)='openDialog()'> Cadastrar</button>
                 </div>
+
                 <mat-card-content>
