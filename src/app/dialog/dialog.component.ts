@@ -7,8 +7,20 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
+      
+      nome:any =''
+      sobrenome:any =''
+      username:any =''
+      cpf:any =''
+      telefone:any =''
+      endereco:any =''
+      complemento:any =''
+      senha0:any =''
+      senha1:any =''
 
   constructor( public dialogRef: MatDialogRef<DialogComponent>,) { }
+    
+     
 
   ngOnInit(): void {
   }

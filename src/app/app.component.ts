@@ -8,18 +8,20 @@ import { DialogComponent } from './dialog/dialog.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent implements OnInit {
   title = 'form1';
 
-  nome:string =''
-  sobrenome:string =''
-  username:string =''
-  cpf:string =''
-  telefone:string =''
-  endereco:string =''
-  complemento:string =''
-  senha0:string =''
-  senha1:string =''
+  nome1:any =''
+  sobrenome1:any =''
+  username1:any =''
+  cpf1:any =''
+  telefone1:any =''
+  endereco1:any =''
+  complemento1:any =''
+  senha01:any =''
+  senha11:any =''
 
   constructor(
     public dialog: MatDialog) {}
@@ -31,19 +33,17 @@ ngOnInit(): void {
  }
 
  openDialog(): void {
-  const dialogRef = this.dialog.open( DialogComponent,{
-    width: '250px',
-   
-  });
+ let ref = this.dialog.open( DialogComponent)
 
-  dialogRef.afterClosed().subscribe(result => {
-    console.log('The dialog was closed');
-  
-  });
+ ref.componentInstance.nome = this.nome1
+ ref.componentInstance.sobrenome =this.sobrenome1
+ ref.componentInstance.username =this.username1
+ ref.componentInstance.cpf =this.cpf1
+ ref.componentInstance.telefone =this.telefone1
+ ref.componentInstance.endereco =this.endereco1
+ ref.componentInstance.complemento =this.complemento1
+ ref.componentInstance.senha0 =this.senha01
+ ref.componentInstance.senha1 =this.senha11
+
+ }
 }
-
-}
-
-
-
-

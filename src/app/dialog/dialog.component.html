@@ -1,5 +1,14 @@
-<h1>Formulario</h1>
-<div>
+<h1 mat-dialog-title>Ola {{nome}}</h1>
+<div mat-dialog-content>
 
-    <button (click)="cancel()">fechar</button>
-</div>
+    <mat-form-field>
+        <p><strong>Nome:</strong>{{nome}}</p>
+
+        <p><strong>Sobrenome:</strong>{{sobrenome}}</p>
+        <p><strong>Username:</strong>{{username}}</p>
+        <p><strong>CPF:</strong>{{cpf}}</p>
+        <p><strong>Tel:</strong> {{telefone}}</p>
+        <p><strong>End:</strong>{{endereco}}</p>
+
+
+    </mat-form-field>
